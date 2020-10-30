@@ -168,7 +168,7 @@ export interface WhereOperators {
   [Op.not]?: boolean | string | number |  Literal | WhereOperators;
 
   /** Example: `[Op.between]: [6, 10],` becomes `BETWEEN 6 AND 10` */
-  [Op.between]?: [number, number];
+  [Op.between]?: [number, number] | [Date, Date];
 
   /** Example: `[Op.in]: [1, 2],` becomes `IN [1, 2]` */
   [Op.in]?: (string | number | Literal)[] | Literal;
